@@ -83,7 +83,7 @@ class Renderer {
 }
 
 async function create() {
-  const browser = await puppeteer.launch({ args: ['--no-sandbox'] })
+  const browser = await puppeteer.launch({   args: ['--no-sandbox', '--disable-setuid-sandbox'] })
   return new Renderer(browser)
 }
 
